@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class AwakeSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject objectToSpawn;
+
+    void Awake()
     {
-        
+        GameObject tmpGameObject = Instantiate(objectToSpawn);
+        tmpGameObject.name = $"AwakeSpawnedObject";
+        tmpGameObject.transform.position = this.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class ToggleSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject objectToSpawn;
+
+    void OnDisable()
     {
-        
+        SpawnObject();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnEnable()
     {
-        
+        SpawnObject();
+    }
+
+    void SpawnObject()
+    {
+        GameObject tmpGameObject = Instantiate(objectToSpawn);
+        tmpGameObject.name = $"ToggleSpawnedObject";
+        tmpGameObject.transform.position = this.transform.position;
     }
 }

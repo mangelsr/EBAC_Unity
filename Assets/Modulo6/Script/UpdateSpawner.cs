@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class UpdateSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject objectToSpawn;
+    private int objNum = 0;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        objNum++;
+        GameObject tmpGameObject = Instantiate(objectToSpawn);
+        tmpGameObject.name = $"ObjectN{objNum}";
+        tmpGameObject.transform.position = Random.insideUnitSphere;
     }
 }
