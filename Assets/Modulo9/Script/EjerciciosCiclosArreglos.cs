@@ -78,13 +78,13 @@ public class EjerciciosCiclosArreglos : MonoBehaviour
         Debug.Log($"vector: [ {string.Join(", ", vector)} ]");
 
 
-        int[] resultVector = new int[rowsNumber];
+        int[] resultVector = new int[colsNumber];
 
         for (int i = 0; i < rowsNumber; i++)
         {
             for (int j = 0; j < colsNumber; j++)
             {
-                resultVector[i] += matrix[i, j] * vector[i];
+                resultVector[j] += matrix[i, j] * vector[i];
             }
         }
         Debug.Log($"resultVector: [ {string.Join(", ", resultVector)} ]");
