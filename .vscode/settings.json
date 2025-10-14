@@ -51,5 +51,11 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "My project.sln"
+    "dotnet.defaultSolution": "EBAC_Unity.sln",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#560D42",
+        "titleBar.activeBackground": "#78125D",
+        "titleBar.activeForeground": "#FFFCFE"
+    },
+    "dotnet.preferCSharpExtension": true
 }
